@@ -2,21 +2,37 @@
 
 A collection of modifier scripts for AI Dungeon, including hidden-quest, world-event, and memory engines.
 
+
 ## Project Structure
+
 ai-dungeon-scripts/
+
 ├── src/
+
 │ ├── hidden-quest-library.js
+
 │ ├── hidden-quest-context.js
+
 │ ├── hidden-quest-input.js
+
 │ ├── hidden-quest-output.js
+
 │ ├── normal-library.js
+
 │ ├── normal-context.js
+
 │ ├── normal-input.js
+
 │ └── normal-output.js
+
 ├── docs/ ← design notes, examples, diagrams
+
 ├── .gitignore
+
 ├── LICENSE
+
 └── README.md
+
 ## Usage
 
 Pick **one** of the two script-sets below:
