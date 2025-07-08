@@ -23,6 +23,7 @@ Pick **one** of the two script-sets below:
 
 ### A) Hidden-Quest Mode
 |---  Time management, hidden quests, random world events, relationships with characters ---|
+
 Copy into your AI Dungeon Scripting:
 hidden-quest-library.js
 hidden-quest-context.js
@@ -33,6 +34,7 @@ OR
 
 ### B) Normal Mode
 |---  Time management and relationships with characters ---|
+
 Copy into your AI Dungeon Scripting:
 normal-library.js  
 normal-context.js  
