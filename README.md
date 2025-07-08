@@ -40,6 +40,7 @@ OR
 |---  Time management and relationships with characters ---|
 
 Copy into your AI Dungeon Scripting:
+
 normal-library.js  
 normal-context.js  
 normal-input.js  
