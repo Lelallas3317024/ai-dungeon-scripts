@@ -25,9 +25,13 @@ Pick **one** of the two script-sets below:
 |---  Time management, hidden quests, random world events, relationships with characters ---|
 
 Copy into your AI Dungeon Scripting:
+
 hidden-quest-library.js
+
 hidden-quest-context.js
+
 hidden-quest-input.js
+
 hidden-quest-output.js
 
 OR
