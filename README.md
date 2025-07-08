@@ -19,16 +19,25 @@ ai-dungeon-scripts/
 └── README.md
 ## Usage
 
-1. Copy the eight `.js` files from `src/` into your AI Dungeon “mods” folder.  
-2. Load files in this order:  
-   - `hidden-quest-library.js`  
-   - `hidden-quest-context.js`  
-   - `hidden-quest-input.js`  
-   - `hidden-quest-output.js`  
-   - then the `normal-*.js` counterparts.  
-3. Customize as needed (turn counts, story-card titles, etc.).
+Pick **one** of the two script-sets below:
 
-## Contributing
+### A) Hidden-Quest Mode
+|---  Time management, hidden quests, random world events, relationships with characters ---|
+Copy into your AI Dungeon Scripting:
+hidden-quest-library.js
+hidden-quest-context.js
+hidden-quest-input.js
+hidden-quest-output.js
+
+OR
+
+### B) Normal Mode
+|---  Time management and relationships with characters ---|
+Copy into your AI Dungeon Scripting:
+normal-library.js  
+normal-context.js  
+normal-input.js  
+normal-output.js  
 
 1. Fork the repo  
 2. Create a branch: `git checkout -b feature/my-change`  
