@@ -1,11 +1,28 @@
-# AI Dungeon Scripts
+## Introduction
 
-A collection of modifier scripts for AI Dungeon, including hidden-quest, world-event, and memory engines.
+This repository provides a set of reusable scripts for AI Dungeon that you can plug into any scenario to automatically generate hidden quests, world events, and maintain character memories.
 
+- **Hidden-Quest**: Unlock side-story quests based on in-game triggers.
+- **World-Event**: Inject global events that affect all players.
+- **Memory Engine**: Track NPC relationships and memories across turns.
+
+
+## Features
+
+- **Modular**: Choose only the scripts you need.
+- **Extensible**: Easily add new cues, events, or memory rules.
+- **JSON-Compatible**: Scripts output structured data for advanced integrations.
+
+
+## Project Files
+
+Branches:
+
+- **main**: Primary branch for legacy scripts and documentation.
+
+- **add-new-scripts**: Stable branch providing updated files containing Auto Cards by Lewd Leah.
 
 ## Project Structure
-
-ai-dungeon-scripts/
 
 ├── src/
 
@@ -25,7 +42,23 @@ ai-dungeon-scripts/
 
 │ └── normal-output.js
 
-├── docs/ ← design notes, examples, diagrams
+├── src/add-new-scripts
+
+│ | ├──  AC hidden-quest-library.js
+
+| │ ├──  AC hidden-quest-context.js
+
+| │ ├──  AC hidden-quest-input.js
+
+| │ ├──  AC hidden-quest-output.js
+
+| │ ├──  AC normal-library.js
+
+| │ ├──  AC normal-context.js
+
+| │ ├──  AC normal-input.js
+
+| │ └──  AC normal-output.js
 
 ├── .gitignore
 
@@ -35,7 +68,7 @@ ai-dungeon-scripts/
 
 ## Usage
 
-Pick **one** of the two script-sets below:
+Pick **one** of the four script-sets below:
 
 ### A) Hidden-Quest Mode
 |---  Time management, hidden quests, random world events, relationships with characters ---|
@@ -50,7 +83,7 @@ hidden-quest-input.js
 
 hidden-quest-output.js
 
-OR
+###OR
 
 ### B) Normal Mode
 |---  Time management and relationships with characters ---|
@@ -61,6 +94,33 @@ normal-library.js
 normal-context.js  
 normal-input.js  
 normal-output.js  
+
+###OR
+
+### C) Auto Card Hidden-Quest Mode
+|---  Time management, hidden quests, random world events, relationships with characters, story card auto update ---|
+
+Copy into your AI Dungeon Scripting:
+
+AC hidden-quest-library.js
+
+AC hidden-quest-context.js
+
+AC hidden-quest-input.js
+
+AC hidden-quest-output.js
+
+###OR
+
+### D) Auto Card Normal Mode
+|---  Time management and relationships with characters, story card auto update ---|
+
+Copy into your AI Dungeon Scripting:
+
+AC normal-library.js  
+AC normal-context.js  
+AC normal-input.js  
+AC normal-output.js  
 
 1. Fork the repo  
 2. Create a branch: `git checkout -b feature/my-change`  
