@@ -1,8 +1,12 @@
+// Your "Input" tab should look like this
 const modifier = (text) => {
-  // 1) let the SAE input-hook run first
-  const input = onInput_SAE(text);
+  // Your other input modifier s  const input = onInput_SAE(text);
 
+  //ipts go here (preferred)
+  text = AutoCards("input", text);
+  const input = onInput_SAE(text);
   // ── Manual time-advance command (/advance X hours)
+   // ── Manual time-advance command (/advance X hours)
   const adv = input.match(/^\/advance\s+(\d+)\s*hours?/i);
   if (adv) {
     const h = parseInt(adv[1], 10);
@@ -54,10 +58,8 @@ const modifier = (text) => {
 
   // 5) finally, return the text object AiDungeon expects
   return { text: input };
-  text = AutoCards("input", text);
-  // Your other input modifier scripts go here (alternative)
+  //crYour other input modifier scripts go here (alternative)
   return {text};
+  
 };
-
-// AiDungeon will call this under the hood:
 modifier(text);
