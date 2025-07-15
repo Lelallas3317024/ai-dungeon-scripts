@@ -1,4 +1,14 @@
-// Your "Library" tab should look like this
+
+// Checkout the Guidebook examples to get an idea of other ways you can use scripting
+// https://help.aidungeon.com/scripting
+
+// Any functions or variables you define here will be available in your other modifier scripts.
+
+// const secretNameOfTheKing = 'Bob'
+
+// function getKingName() {
+//   return secretNameOfTheKing
+// }// Your "Library" tab should look like this
 /*
 Auto-Cards
 Made by LewdLeah on May 21, 2025
@@ -3341,12 +3351,12 @@ function AutoCards(inHook, inText, inStop) {
                 return 1;
             }
             // Normalize both strings for further comparison purposes
-            const [cleanA, cleanB] = [strA, strB].map(str => (str
+            const [cleanA, cleanB] = [strA, strB].map(str => limitString((str
                 .replace(/[0-9\s]/g, " ")
                 .trim()
                 .replace(/  +/g, " ")
                 .toLowerCase()
-            ));
+            ), 1400));
             if (cleanA === cleanB) {
                 return 1;
             }
@@ -6218,7 +6228,6 @@ function callAIForArc(text){
   if (state.turnCount == 1 || state.turnCount % state.turnsPerAICall === 0) {
     // Warn player of AI call next turn
     text = text + "\n\n<< ⚠️ Updating Story Arc Next Turn! Click 'Continue' or type '/stop'. >>";
-    
     AutoCards().API.postponeEvents(1)
     // Unlock feed prompt to AI for onContext
     state.unlockFeedAIPrompt = true;
@@ -6351,7 +6360,6 @@ function logContextToSettingsSC(text){
 
 
 // Library Script: Character System for Civilians & Pet-Vamp in Night Huntress
-
 
 
 
