@@ -1,4 +1,5 @@
 const modifier = (text) => {
+      text = AutoCards("output", text);
   // 1) run your existing SAE output hook
   let output = onOutput_SAE(text);
 
@@ -65,7 +66,7 @@ const modifier = (text) => {
 
   // 5) return the final text object
   return { text: output };
-    text = AutoCards("output", text);
+
   // Your other output modifier scripts go here (alternative)
   return {text};
 };
