@@ -1,5 +1,9 @@
+// Your "Output" tab should look like this
 const modifier = (text) => {
-  let output = onOutput_SAE(text);
+ 
+  // Your other output modifier scripts go here (preferred)
+  text = AutoCards("output", text);
+   let output = onOutput_SAE(text);
 
   // 2) Define positive & negative cues
   const positive = /\bhug\b|\bkiss\b|\bthank you\b/i;
@@ -29,7 +33,6 @@ const modifier = (text) => {
   memSC.entry = JSON.stringify(state.memories);
 
   return { text: output };
-  text = AutoCards("output", text);
   // Your other output modifier scripts go here (alternative)
   return {text};
 };
