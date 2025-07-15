@@ -4,6 +4,7 @@
 // https://help.aidungeon.com/scripting
 
 const modifier = (text) => {
+     text = AutoCards("input", text);
   // 1) let the SAE input-hook run first
   const input = onInput_SAE(text);
 
@@ -76,7 +77,7 @@ const modifier = (text) => {
 
   // 7) finally, return the text object AiDungeon expects
   return { text: input };
-    text = AutoCards("input", text);
+ 
   // Your other input modifier scripts go here (alternative)
   return {text};
 };
