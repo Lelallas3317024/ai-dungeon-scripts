@@ -5,6 +5,8 @@
 
 // Every script needs a modifier function
 const modifier = (text) => {
+  
+    [text, stop] = AutoCards("context", text, stop);
   // Ensure defaults to prevent crashes
   state.relationships ??= {};
   state.traits ??= {};
@@ -83,7 +85,6 @@ const modifier = (text) => {
   } catch (err) {
     return { text: ctx };
   }
-    [text, stop] = AutoCards("context", text, stop);
   // Your other context modifier scripts go here (alternative)
   return {text, stop};
 };
