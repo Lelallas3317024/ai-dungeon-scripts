@@ -1,6 +1,10 @@
-
+// Your "Context" tab should look like this
 const modifier = (text) => {
-  // Ensure defaults to prevent crashes
+ 
+
+  // Your other context modifier scripts go here (preferred)
+  [text, stop] = AutoCards("context", text, stop);
+     // Ensure defaults to prevent crashes
   state.relationships ??= {};
   state.traits        ??= {};
   state.memories      ??= {};
@@ -88,12 +92,8 @@ const modifier = (text) => {
 
   } catch {
     // Fallback if anything goes wrong
-    return { text: ctx };
-  }
-  [text, stop] = AutoCards("context", text, stop);
-  // Your other context modifier scripts go here (alternative)
+    return { text: ctx };// Your other context modifier scripts go here (alternative)
   return {text, stop};
+  }
 };
-
-// AiDungeon calls this under the hood:
 modifier(text);
